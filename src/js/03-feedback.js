@@ -24,6 +24,9 @@ form.addEventListener('submit', onFormClear);
 
 function onFormClear(evt) {
   evt.preventDefault();
+  console.log(`${emailInput.name}:`, emailInput.value);
+  console.log(`${messageInput.name}:`, messageInput.value);
+
   evt.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
 }
